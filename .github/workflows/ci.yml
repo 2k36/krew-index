@@ -35,6 +35,7 @@ jobs:
         fetch-depth: 0  # disable shallow clones
 
     - name: Fetch base branch
+      if: github.event_name == 'pull_request'
       run: |
         git fetch --no-tags --prune --depth=1 origin +refs/heads/${GITHUB_BASE_REF}:refs/remotes/origin/${GITHUB_BASE_REF}
 
@@ -60,6 +61,7 @@ jobs:
         go get sigs.k8s.io/krew/cmd/validate-krew-manifest@${KREW_VERSION}
 
     - name: Validate updated plugin manifests
+      if: github.event_name == 'pull_request'
       run : |
         set -x
         set -euo pipefail
