@@ -1,5 +1,6 @@
 # krew-index
 
+
 This repository is the centralized plugin index for [Krew (kubectl plugin
 manager)][krew-site]. It is meant to be useful only for plugin developers.
 
