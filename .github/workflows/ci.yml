@@ -20,7 +20,7 @@ jobs:
       with:
         go-version: '1.14'
         cache: true
-        cache-dependency-path: ~/go/pkg/mod
+        cache-dependency-path: '$HOME/go/pkg/mod'
       id: go
 
     - name: Check out PR branch
