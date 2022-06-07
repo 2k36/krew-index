@@ -25,6 +25,7 @@ jobs:
       with:
         go-version: '1.17'
         cache: true
+        cache-dependency-path: '$HOME/go/pkg/mod'
       id: go
 
     - name: Fetch base branch
